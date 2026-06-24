@@ -1,0 +1,24 @@
+{
+  "name": "@onecompute/worker",
+  "version": "0.1.0",
+  "description": "GPU worker client for the ONE decentralized AI network — serve jobs, earn USDC",
+  "license": "MIT",
+  "type": "module",
+  "bin": { "one-worker": "dist/index.js" },
+  "files": ["dist", "!dist/**/*.test.*"],
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "test": "tsc && node --test 'dist/**/*.test.js'",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.6.0"
+  },
+  "engines": { "node": ">=20" },
+  "repository": "github:onecomputexyz/one-worker",
+  "homepage": "https://onecompute.xyz",
+  "bugs": "https://github.com/onecomputexyz/one-worker/issues",
+  "keywords": ["ai", "gpu", "worker", "inference", "decentralized", "one", "usdc"]
+}
